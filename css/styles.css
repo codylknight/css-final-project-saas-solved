@@ -90,6 +90,7 @@ ul.nav-links .Buynow {
 
     .hamburger {
         display: flex;
+        color: #111827;
     }
 }
 
@@ -114,8 +115,9 @@ ul.nav-links .Buynow {
     justify-content: space-between;
     align-items: center;
     padding: 80px 60px;
-    min-height: 100vh;
+    min-height: 20vh;
     z-index: 1;
+    gap: 30px;
 }
 
 
@@ -615,7 +617,6 @@ button {
 }
 
 .footer-column {
-    min-width: 150px;
     flex: 1;
 }
 
@@ -688,18 +689,18 @@ button {
 }
 
 @media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .footer-column {
-        flex: 1 1 100%;
+    .pricing-card {
         max-width: 100%;
     }
+
+    .footer {
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        flex-direction: row;
+        width: 100%;
+    }
+
 
     .footer-column ul {
         padding-left: 0;
@@ -718,5 +719,25 @@ button {
     .contact a,
     .contact p {
         width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .stepper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stepper:before {
+        all: unset;
+    }
+
+    .row {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .footer-column {
+        min-width: 150px;
     }
 }
